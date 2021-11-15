@@ -1,0 +1,65 @@
+
+
+/* ----------------- Footer --------------------- */
+
+footer.footer{
+    height: 250px;
+    background-color: black;
+    position: relative;
+    clear: both;
+}
+
+footer.footer .container-fluid{
+    
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+footer.footer .container-fluid .about{
+    width: 50%;
+}
+
+footer.footer .container-fluid > div{
+    flex-grow: 1;
+    flex-basis: 0;
+    padding: 3rem .9rem;
+}
+
+footer.footer .container-fluid h2{
+    color: var(--white);
+}
+
+
+footer.footer .follow div i{
+    color: var(--white);
+    padding: 0 .4rem;
+}
+
+footer.footer .contact i{
+    color: var(--white);
+    padding: 0 .4rem;
+}
+
+
+footer.footer .move-up{
+    position: absolute;
+    right: 6%;
+    top: 50%;
+}
+
+footer.footer .move-up span{
+    color: var(--midnight);
+}
+
+footer.footer .move-up span:hover{
+    color: var(--white);
+    cursor: pointer;
+}
+footer .footer-bottom {
+    height: 23px;
+    background-color: grey;
+    position: relative;
+    clear: both;
+}
+
+/* ---------x------- Footer ----------x---------- */

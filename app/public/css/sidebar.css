@@ -1,0 +1,117 @@
+/* Always take up entire screen */
+#page-content-wrapper {
+    width: 100%;
+    position: absolute;
+    border: 5px solid blue;
+}
+
+
+/* Sidebar */
+.sidebar a {
+    text-decoration: none;
+    color: black;
+}
+
+.sidebar a :hover {
+    text-decoration: none;
+    color: black;
+}
+
+
+#sidebar-wrapper {
+    z-index: 1;
+    position: absolute;
+    width: 200px;
+    height: 100%;
+    overflow-y: hidden;
+    background: #2C3E50;
+    border: 2px solid red;
+    opacity: 0.9;
+}
+/* menu icons*/
+
+.menu-icons i.fa-bars {
+    position: relative;
+  left: 20px;
+  top: 10px;
+  background: orange;
+  color: #fff;
+  height: 45px;
+  width: 45px;
+  z-index: 9999;
+  border: 1px solid #333;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  
+}
+.menu-icons i.fa-times {
+position: relative;
+  left: 20px;
+  top: 10px;
+  background: orange;
+  color: #fff;
+  height: 45px;
+  width: 45px;
+  z-index: 9999;
+  border: 1px solid #333;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  opacity: 0;
+}
+
+
+.menu-icons i.fa-times{
+    opacity: 0;
+  }
+  #btn :checked ~ .menu-icons i.fa-times{
+    opacity: 1;
+    transform: rotate(-180deg);
+  }
+  #btn :checked ~ .menu-icons i.fa-bars{
+    opacity: 0;
+    transform: rotate(180deg);
+  }
+
+/* X menu icons X*/
+
+
+/* Sidebar styling - the entire ul list */
+.sidebar-nav {
+    padding: 0;
+    list-style: none;
+}
+
+.sidebar-nav li {
+    text-indent: 20px;
+    line-height: 40px;
+}
+
+.sidebar-nav li a {
+    display: block;
+    text-decoration: none;
+    color: #ddd;
+}
+
+.sidebar-nav li a:hover {
+    background: #16A085;
+}
+
+
+
+/* Change with of sidebar from 0 to 250px */
+#page-content-wrapper.menuDisplayed #sidebar-wrapper {
+    width: 250px;
+}
+
+/* Since we added left padding, we need to shrink the width by 250px */
+.menuDisplayed #page-content-wrapper {
+    padding-left: 250px;
+}

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Creation de compte</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/form_css.css">
+
+	<script type="text/javascript">
+	
+    	function validerAdresse(){
+
+			let pw1 = document.getElementById("password").value;
+			let pw2 = document.getElementById("re-password").value;
+			
+			if (pw1 != pw2) {
+				alert ("les mots de passes ne correspondent pas");
+			}
+
+			let email = document.form.email;
+			let modele = /^[a-z0-9\-_\.]+@[a-z0-9]+\.[a-z]{2,10}$/i;
+		
+			if (modele.test(email)){
+				alert("Votre adresse email est valide !");
+			}
+			else{
+				alert("Votre adresse email est invalide !");
+			}
+}
+    
+  </script>
+
+</head>
+
+<body style="background-color: grey;">
+
+	<div class="container">
+		<div class="row centered-form">
+			<div class="col-xs-12 col-sm-8 col-md-4 col-sm-offset-2 col-md-offset-4">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h3 class="panel-title">Creer votre compte</h3>
+					</div>
+
+					<div class="panel-body">
+
+						<form action="/form" method="POST">
+							<div class="row"> 
+								<div class="col-xs-6 col-sm-6 col-md-6">
+									<div class="form-goup">
+										<input type="text" name="prenom" id="prenom" class="form-control input-sm" placeholder="Prénom" required pattern="[A-Za-z]{3,30}" title="De 3 à 30 caracteres">
+									</div>
+								</div>
+								<div class="col-xs-6 col-sm-6 col-md-6">
+									<div class="form-goup">
+										<input type="text" name="nom" id="nom" class="form-control input-sm" placeholder="Nom" required pattern="[A-Za-z]{2,15}" title="De 2 à 15 caracteres">
+									</div>
+								</div>
+							</div>
+
+							<div class="form-goup" id="Telephone">
+								<input type="tel" name="telephone" id="telephone" class="form-control input-sm" placeholder="Telephone" pattern="[0-9]{9,15}" title="De 9 a 15 chiffres">
+							</div>	
+
+							<div class="form-goup" id="Email">
+								<input type="email" name="email" id="email" class="form-control input-sm" placeholder="Addresse mail" required title="adresse@email.com">
+							</div>	
+
+							<div class="row" on>
+								<div class="col-xs-6 col-sm-6 col-ms-6">
+									<div class="form-goup">
+										<input type="password" name="password" id="password" class="form-control input-sm" placeholder="Mot de passe" required value="">
+									</div>
+								</div>
+								<div class="col-xs-6 col-sm-6 col-ms-6">
+									<div class="form-goup">
+										<input type="password" name="re-password" id="re-password" class="form-control input-sm" placeholder="Confirmer mot de passe" required value="">
+									</div>
+								</div>
+							</div>
+
+							<input type="submit" value="CREER LE COMPTE" class="btn btn-info btn-block" id="submit" onclick="validerAdresse()">			 
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+		<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+</body>
+</html>

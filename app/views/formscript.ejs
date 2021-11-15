@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		function boite() {
+
+			var val = confirm("êtes-vous sûr de vouloir creer un compte ?");
+
+ if (val==true) {
+
+        //document.location.href='formulaire.html';
+        window.open("form");
+ }
+ else{ window.location.replace("/") }
+ 	;
+
+		}
+		
+	</script>
+</head>
+<body style="background-color: grey;">
+	<h3 style="text-align: center; font-size: 50px; color: orange;">Cree ton compte et reçoit des notifications</h3>
+	<p style="text-align: center; font-size: 30px;">Bienvenue cher visiteur,<br><br>Aprés création de ce compte, vous allez forcément recevoir des notificatons par email vous tenant informés sur l'évolution .<br><br>Veuillez cliquer sur ce bouton pour continuer.</p>
+<form style="text-align: center;">
+	<label>
+		<input style="font-size: 30px; " type="submit" name="Creer un compte" value="Créer mon compte" onclick="boite()">
+	</label>
+	
+</form>
+</body>
+</html>
